@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        #container{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: [c1] 75px [c2] 75px 50px;
+            grid-template-rows: [r1] 50px [r2] 50px [r3] 50px [r4];
+            grid-template-areas: 'a a b'
+            'a a c'
+            'd e c';
+        }
+        .item[class^=item]{
+            font-size: 32px;
+            text-align: center;
+            border: 1px solid #fff;
+            background-color: black;
+            color: white;
+        }
+        .a{
+            grid-area: a;
+        }
+        .b{
+            grid-area: b;
+        }
+        .c{
+            grid-area: c;
+        }
+        .d{
+            grid-area: d;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="item item-1 a">1</div>
+    <div class="item item-2 b">2</div>
+    <div class="item item-3 c">3</div>
+    <div class="item item-4 d">4</div>
+    <div class="item item-5 e">5</div>
+</div>
+</body>
+</html>
